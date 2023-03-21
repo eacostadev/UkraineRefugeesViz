@@ -1,0 +1,30 @@
+body {
+    font-family: 'Caveat', cursive;
+    margin: 0;
+}
+
+.disBlock {
+    display: block;
+}
+.marginAuto {
+    margin: 0 auto;
+}
+
+.font400 {
+    font-weight: 400;
+}
+
+.font600 {
+    font-weight: 600;
+}
+
+.fontCaveat {
+    font-family: 'Caveat', cursive;
+}
+
+#title {
+    font-size: 35px;
+    text-align: center;
+    line-height: 1;
+    margin: 30px 0;
+}
