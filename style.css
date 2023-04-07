@@ -1,5 +1,5 @@
 body {
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
 
@@ -18,13 +18,13 @@ body {
     font-weight: 600;
 }
 
-.fontCaveat {
-    font-family: 'Caveat', cursive;
-}
-
 #title {
     font-size: 35px;
     text-align: center;
     line-height: 1;
     margin: 30px 0;
+}
+
+#lines {
+    position: absolute;
 }
