@@ -3,6 +3,14 @@ body {
     margin: 0;
 }
 
+.smallHeadline {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textCenter {
+    text-align: center;
+}
+
 .disBlock {
     display: block;
 }
@@ -25,6 +33,12 @@ body {
     margin: 30px 0;
 }
 
-#lines {
-    position: absolute;
+.countryLabel {
+    font-size: 28px;
+}
+
+.countryCount {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
 }
