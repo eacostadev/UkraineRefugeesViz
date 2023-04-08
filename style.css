@@ -42,3 +42,11 @@ body {
     font-weight: 700;
     font-size: 20px;
 }
+
+.d-none {
+    display: none;
+}
+
+.inactive{
+    opacity: 0;
+}

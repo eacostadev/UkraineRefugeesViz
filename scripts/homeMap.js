@@ -14,12 +14,12 @@ const germanyColor = "#7DCFB6";
 const czechiaColor = "#00B2CA";
 const englandColor = "#F79256";
 const italyColor = "#5999e5";
-const spainColor = "#6a994e";
-const franceColor = "#bb3e03";
+const spainColor = "#90c371";
+const franceColor = "#9b71bb";
 const slovakiaColor = "#00f5d4";
 const romaniaColor = "#a8dadc";
 
-
+const opacity = ".85";
 
 
 const width = 1200;
@@ -62,9 +62,11 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
     let featurePoland = data.features[127];
     let centerPoland = geoGenerator.centroid(featurePoland);
 
-    let feature = data.features[134];
+    let feature = data.features[133];
     let center = geoGenerator.centroid(feature);
 
+    //134 Russia
+    //127 Poland
     //41 Germany
     //40 Czech
     //57 England
@@ -74,8 +76,8 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
     //148 Slovakia
     //133 Romania
 
-    console.log(center)
-    console.log(feature.properties.name)
+   // console.log(center)
+   // console.log(feature.properties.name)
     // console.log(featureRussia.id)
 
 
@@ -88,34 +90,174 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
 
     d3.select("path#Russia")
         .style("stroke", russiaColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Russia").classed("inactive", false)
+            d3.select(".node_Russia").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Russia").classed("inactive", true)
+            d3.select(".node_Russia").classed("inactive", true)
+        });
 
     d3.select("path#Poland")
         .style("stroke", polandColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Poland").classed("inactive", false)
+            d3.select(".node_Poland").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Poland").classed("inactive", true)
+            d3.select(".node_Poland").classed("inactive", true)
+        });
 
     d3.select("path#Germany")
         .style("stroke", germanyColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Germany").classed("inactive", false)
+            d3.select(".node_Germany").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Germany").classed("inactive", true)
+            d3.select(".node_Germany").classed("inactive", true)
+        });
 
     d3.select("path[id2='CZE']")
         .style("stroke", czechiaColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Czechia").classed("inactive", false)
+            d3.select(".node_Czechia").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Czechia").classed("inactive", true)
+            d3.select(".node_Czechia").classed("inactive", true)
+        });
 
     d3.select("path#England")
         .style("stroke", englandColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_United").classed("inactive", false)
+            d3.select(".node_United").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_United").classed("inactive", true)
+            d3.select(".node_United").classed("inactive", true)
+        });
 
     d3.select("path#Italy")
         .style("stroke", italyColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Italy").classed("inactive", false)
+            d3.select(".node_Italy").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Italy").classed("inactive", true)
+            d3.select(".node_Italy").classed("inactive", true)
+        });
 
     d3.select("path#Spain")
         .style("stroke", spainColor)
         .style("stroke-width", "2")
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Spain").classed("inactive", false)
+            d3.select(".node_Spain").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Spain").classed("inactive", true)
+            d3.select(".node_Spain").classed("inactive", true)
+        });
 
     d3.select("path#France")
         .style("stroke", franceColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_France").classed("inactive", false)
+            d3.select(".node_France").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_France").classed("inactive", true)
+            d3.select(".node_France").classed("inactive", true)
+        });
 
     d3.select("path#Slovakia")
         .style("stroke", slovakiaColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Slovakia").classed("inactive", false)
+            d3.select(".node_Slovakia").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Slovakia").classed("inactive", true)
+            d3.select(".node_Slovakia").classed("inactive", true)
+        });
 
     d3.select("path#Romania")
         .style("stroke", romaniaColor)
+        .on('mouseover', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', opacity);
+            d3.select(".line_Romania").classed("inactive", false)
+            d3.select(".node_Romania").classed("inactive", false)
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('50')
+                .attr('opacity', '1');
+            d3.select(".line_Romania").classed("inactive", true)
+            d3.select(".node_Romania").classed("inactive", true)
+        });
 
 
     d3.csv("/data/ukrainian-refugees-2023-by-country-MarchReport.csv").then(function (dataRef) {
@@ -132,13 +274,14 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
             .attr('y1', function (d) { return d.y })
             .attr('x2', d => moveCountryLine(d.country))
             .attr('y2', "100")
+            .attr("class", d => { return "line_" + d.country + " inactive" })
 
         const nodes = svg.append("g")
             .selectAll(".circle")
             .data(dataRef.slice(0, 10))
             .enter()
             .append("g")
-            .attr("class", d => { return "gr_" + d.country })
+            .attr("class", d => { return "node_" + d.country + " inactive" })
 
         nodes.append("circle")
             .attr("r", 60)
@@ -166,8 +309,23 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
                 case "Russia":
                     return "900";
                 case "Poland":
-                    return "900";
-
+                    return "750";
+                case "Germany":
+                    return "600";
+                case "Czechia":
+                    return "450";
+                case "United Kingdom":
+                    return "310";
+                case "Italy":
+                    return "180";
+                case "Spain":
+                    return "140";
+                case "France":
+                    return "100";
+                case "Slovakia":
+                    return "350";
+                case "Romania":
+                    return "500";
             }
         }
 
@@ -175,8 +333,24 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
             switch (country) {
                 case "Russia":
                     return "900";
-                    case "Poland":
-                    return "900";
+                case "Poland":
+                    return "750";
+                case "Germany":
+                    return "600";
+                case "Czechia":
+                    return "450";
+                case "United Kingdom":
+                    return "310";
+                case "Italy":
+                    return "180";
+                case "Spain":
+                    return "140";
+                case "France":
+                    return "100";
+                case "Slovakia":
+                    return "350";
+                case "Romania":
+                    return "500";
             }
         }
 
@@ -184,8 +358,24 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
             switch (country) {
                 case "Russia":
                     return russiaColor;
-                    case "Poland":
+                case "Poland":
                     return polandColor;
+                case "Germany":
+                    return germanyColor;
+                case "Czechia":
+                    return czechiaColor;
+                case "United Kingdom":
+                    return englandColor;
+                case "Italy":
+                    return italyColor;
+                case "Spain":
+                    return spainColor;
+                case "France":
+                    return franceColor;
+                case "Slovakia":
+                    return slovakiaColor;
+                case "Romania":
+                    return romaniaColor;
             }
         }
 
