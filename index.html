@@ -13,6 +13,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="scripts/homeMap.js"></script>
+    <script src="scripts/distanceMap.js"></script>
 
 </head>
 
@@ -21,7 +22,7 @@
         from <span class="font600" style="font-size: 40px;">Ukraine</span> recorded in Europe and Asia
     </div>
     <div class="smallHeadline textCenter">
-        Top 10 Countries
+        Visualizations are Concentrated on the Top 10 Countries
     </div>
 
     <!-- HomePage Map-->
@@ -29,7 +30,13 @@
         <svg id="homeMap" class="disBlock marginAuto"></svg>
     </div>
 
-
+    <div id="distanceDiv" class="marginTop5" style="width: 50%;">
+        <div class="subTitle textCenter">Distance Traveled from Ukraine</div>
+        <div class="smallHeadline textCenter">
+           The distance is measured from capital city to capital city <br> Note: Russian border from Ukraine is 21km
+        </div>
+        <svg id="distanceMap" class="disBlock"></svg>
+    </div>
 
 </body>
 

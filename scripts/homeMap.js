@@ -23,7 +23,7 @@ const opacity = ".85";
 
 
 const width = 1200;
-const height = 900;
+const height = 800;
 
 // Map and projection
 const projection = d3.geoNaturalEarth1()   //geoNaturalEarth1
@@ -56,14 +56,14 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
 
     // console.log(data.features)
 
-    let featureRussia = data.features[134];
-    let centerRussia = geoGenerator.centroid(featureRussia);
+    // let featureRussia = data.features[134];
+    // let centerRussia = geoGenerator.centroid(featureRussia);
 
-    let featurePoland = data.features[127];
-    let centerPoland = geoGenerator.centroid(featurePoland);
+    // let featurePoland = data.features[127];
+    // let centerPoland = geoGenerator.centroid(featurePoland);
 
-    let feature = data.features[133];
-    let center = geoGenerator.centroid(feature);
+    // let feature = data.features[133];
+    // let center = geoGenerator.centroid(feature);
 
     //134 Russia
     //127 Poland

@@ -3,6 +3,14 @@ body {
     margin: 0;
 }
 
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginTop5 {
+    margin-top: 5%;
+}
+
 .smallHeadline {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -13,6 +21,9 @@ body {
 
 .disBlock {
     display: block;
+}
+.disInline-Block {
+    display: inline-block;
 }
 .marginAuto {
     margin: 0 auto;
@@ -33,6 +44,10 @@ body {
     margin: 30px 0;
 }
 
+.subTitle {
+    font-size: 35px;
+}
+
 .countryLabel {
     font-size: 28px;
 }
@@ -49,4 +64,13 @@ body {
 
 .inactive{
     opacity: 0;
+}
+
+#distanceMap {
+margin-top: 5%;
+}
+
+.distStyle {
+    font-size: 25px;
+    font-weight: 600;
 }
