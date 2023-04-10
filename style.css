@@ -1,10 +1,29 @@
 body {
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginTop5 {
+    margin-top: 5%;
+}
+
+.smallHeadline {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textCenter {
+    text-align: center;
 }
 
 .disBlock {
     display: block;
+}
+.disInline-Block {
+    display: inline-block;
 }
 .marginAuto {
     margin: 0 auto;
@@ -18,13 +37,40 @@ body {
     font-weight: 600;
 }
 
-.fontCaveat {
-    font-family: 'Caveat', cursive;
-}
-
 #title {
     font-size: 35px;
     text-align: center;
     line-height: 1;
     margin: 30px 0;
+}
+
+.subTitle {
+    font-size: 35px;
+}
+
+.countryLabel {
+    font-size: 28px;
+}
+
+.countryCount {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.d-none {
+    display: none;
+}
+
+.inactive{
+    opacity: 0;
+}
+
+#distanceMap {
+margin-top: 5%;
+}
+
+.distStyle {
+    font-size: 25px;
+    font-weight: 600;
 }
