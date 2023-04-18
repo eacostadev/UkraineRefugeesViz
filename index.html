@@ -8,9 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" media="screen, projection" />
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
+
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="scripts/homeMap.js"></script>
     <script src="scripts/distanceMap.js"></script>
@@ -30,13 +31,21 @@
         <svg id="homeMap" class="disBlock marginAuto"></svg>
     </div>
 
-    <div id="distanceDiv" class="marginTop5" style="width: 50%;">
+    <!-- Distance Map -->
+    <div id="distanceDiv" class="marginTop5 disInline-Block" style="width: 49%;">
         <div class="subTitle textCenter">Distance Traveled from Ukraine</div>
         <div class="smallHeadline textCenter">
-           The distance is measured from capital city to capital city <br> Note: Russian border from Ukraine is 21km
+            The distance is measured from capital city to capital city <br> Note: Russian border from Ukraine is 21km
         </div>
-        <svg id="distanceMap" class="disBlock"></svg>
+        <svg id="distanceMap"></svg>
     </div>
+
+    <!-- Bar Chart -->
+    <div id="barChartContent" class="marginTop5 disInline-Block" style="width: 49%;">
+        <iframe src="totalCost.html" frameborder="0" cellspacing="0" width="700" height="700" background="none"
+            scrolling="no" position="fixed" style="border-style: none;"></iframe>
+    </div>
+
 
 </body>
 

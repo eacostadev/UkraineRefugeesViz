@@ -1,0 +1,76 @@
+ body {
+     font-family: 'Caveat', cursive;
+ }
+
+ rect.bar {
+     fill: #38506f;
+     opacity: .95;
+ }
+
+ text.title {
+     font-size: 35px;
+ }
+
+ body {
+
+ }
+
+ svg {
+     width: 1000px;
+     height: 800px;
+ }
+
+ a {
+     text-decoration: none;
+     padding: 10px;
+     margin: 10px;
+     text-align: center;
+ }
+
+ .button {
+     display: inline-block;
+     border: 2px solid rgba(100, 148, 237, 0.377);
+     border-radius: 50%;
+     height: 90px;
+     width: 90px;
+     fill: cornflowerblue;
+     font-family: 'Caveat', cursive;
+     font-weight: 600;
+     font-size: 16px;
+ }
+
+ .button:hover {
+     border-color: dodgerblue;
+ }
+
+ .expenses {
+     width: 400px;
+     height: 150px;
+     padding: 10px;
+     position: absolute;
+     bottom: 11%;
+     left: 16%;
+ }
+
+ h2 {
+     text-align: center;
+     font-size: 30px;
+     font-weight: 400;
+ }
+
+ .tooltipbox {
+     width: 60px;
+     height: 20px;
+     fill: rgb(255, 255, 255);
+     opacity: 0.9;
+ }
+
+ .tooltip {
+     width: 60px;
+     height: 20px;
+     fill: rgb(0, 199, 100);
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 14px;
+     font-weight: bold;
+
+ }
