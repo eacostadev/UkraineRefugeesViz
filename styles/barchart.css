@@ -36,7 +36,8 @@
      fill: cornflowerblue;
      font-family: 'Caveat', cursive;
      font-weight: 600;
-     font-size: 16px;
+     font-size: 20px;
+     line-height: 1;
  }
 
  .button:hover {
