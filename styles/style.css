@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+.marginNone {
+    margin: 0 0 0 0;
+}
+
 .marginTop20 {
     margin-top: 20px;
 }

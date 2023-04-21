@@ -1,23 +1,9 @@
  body {
-     font-family: 'Caveat', cursive;
- }
-
- rect.bar {
-     fill: #38506f;
-     opacity: .95;
+     font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
  text.title {
      font-size: 35px;
- }
-
- body {
-
- }
-
- svg {
-     width: 1000px;
-     height: 800px;
  }
 
  a {
@@ -29,28 +15,48 @@
 
  .button {
      display: inline-block;
-     border: 2px solid rgba(100, 148, 237, 0.377);
      border-radius: 50%;
      height: 90px;
      width: 90px;
-     fill: cornflowerblue;
-     font-family: 'Caveat', cursive;
+     font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      font-weight: 600;
-     font-size: 20px;
+     font-size: 22px;
      line-height: 1;
+     cursor: pointer;
  }
 
- .button:hover {
-     border-color: dodgerblue;
+ .living {
+    border: 2px solid #faae85;
+    background-color: #faccb3;
+ }
+
+ .edu {
+    border: 2px solid #b493e0;
+    background-color: #cfbce9;
+ }
+
+ .health {
+    border: 2px solid #62aec5;
+    background-color: #89d1e7;
+    line-height: .7;
+ }
+
+ .living:hover {
+    background-color: #ffe5d8;
+ }
+
+ .edu:hover {
+    background-color: #e2d5f5;
+ }
+
+ .health:hover {
+    background-color: #a5e2f5;
  }
 
  .expenses {
-     width: 400px;
-     height: 150px;
-     padding: 10px;
      position: absolute;
-     bottom: 11%;
-     left: 16%;
+     bottom: 8%;
+     left: 14%;
  }
 
  h2 {
@@ -75,3 +81,59 @@
      font-weight: bold;
 
  }
+
+ .axisTitle {
+     font-size: 15px;
+ }
+
+ .xaxis {
+     font-size: 14px;
+ }
+
+ .barPoland {
+    fill: #EAAC8B;
+ }
+
+ .barGermany {
+    fill: #7DCFB6;
+ }
+
+ .barCzechia {
+    fill: #00B2CA;
+ }
+
+ .barSpain {
+    fill: #90c371;
+ }
+
+ .barRomania {
+    fill: #a8dadc;
+ }
+
+ .barItaly {
+    fill: #5999e5;
+ }
+
+ .barSwitzerland {
+    fill: #fff067;
+ }
+
+ .barFrance {
+    fill: #9b71bb;
+ }
+
+ .barSlovakia {
+    fill: #00f5d4;
+ }
+
+ .barAustria {
+    fill: #4c71b4;
+ }
+
+
+
+
+
+
+
+

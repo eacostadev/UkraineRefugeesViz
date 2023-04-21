@@ -10,9 +10,9 @@ let svg_edu = d3.select("#edu").attr("width", w2).attr("height", h2),
   .append("text")
   .attr("class", "title")
   .attr("transform", "translate(100,0)")
-  .attr("x", 0)
+  .attr("x", -50)
   .attr("y", 50)
-  .text("Ukrainian Refugee Education Cost");
+  .text("Ukrainian Refugee Support Education Cost");
 
 var xScale = d3.scaleBand().range([0, width_edu]).padding(0.4),
   yScale = d3.scaleLinear().range([height_edu, 0]);
@@ -58,17 +58,17 @@ d3.csv(
         d3
           .axisLeft(yScale)
           .tickFormat(function (d) {
-            return "€" + d;
+            return "€ " + d;
           })
           .ticks(12)
       )
       .append("text")
-      .attr("class", "xaxis")
+      .attr("class", "axisTitle")
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
-      .attr("dy", "-5.1em")
+      .attr("dy", "-4.1em")
       .attr("text-anchor", "end")
-      .attr("stroke", "black")
+      .attr("fill", "black")
       .text("Cost (Million Euros)")
   
 
@@ -76,7 +76,9 @@ d3.csv(
       .data(data)
       .enter()
       .append("rect")
-      .attr("class", "bar")
+      .attr("class", function (d) {
+        return `bar bar${d.Country}`
+      })
       .attr("x", function (d) {
         return xScale(d.Country);
       })
@@ -84,7 +86,7 @@ d3.csv(
         return yScale(d.Cost);
       })
       // .attr("width", xScale.bandwidth())
-      .attr("width", 20)
+      .attr("width", 25)
       .attr("height", function (d) {
         return height_edu - yScale(d.Cost);
       });
