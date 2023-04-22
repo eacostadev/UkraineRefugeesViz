@@ -19,8 +19,10 @@ let xScale = d3.scaleBand().range([0, width_total]).padding(0.4),
 
 let g = svg_total.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
+let location = location.href.includes("UkraineRefugeesViz") ? "'https://eacostadev.github.io/UkraineRefugeesViz" : location.href;
+
 d3.csv(
-  "https://eacostadev.github.io/UkraineRefugeesViz/data/cost-by-country.csv",
+  location + "/data/cost-by-country.csv",
   function (error, data) {
     if (error) {
       throw error;
