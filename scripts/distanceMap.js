@@ -8,7 +8,7 @@ const distance_projection = d3.geoOrthographic()
 
 
 // Load external map data
-d3.json(location.href + "/data/distance.geo.json").then(function (data) {
+d3.json(location.origin + "/data/distance.geo.json").then(function (data) {
 
     let geoGenerator2 = d3.geoPath().projection(distance_projection);
 
@@ -36,10 +36,10 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
     let ukrFeature = data.features[0];
     let ukrCenter = geoGenerator2.centroid(ukrFeature);
 
-    console.log(ukrCenter)
-    console.log(ukrFeature.properties.name)
+   // console.log(ukrCenter)
+   // console.log(ukrFeature.properties.name)
 
-    d3.csv(location.href + "/data/distance.csv").then(function (dataDist) {
+    d3.csv(location.origin + "/data/distance.csv").then(function (dataDist) {
         let areas = svg_distance.append("g")
             .selectAll(".area")
             .data(dataDist)

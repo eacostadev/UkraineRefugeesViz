@@ -22,8 +22,8 @@ const romaniaColor = "#a8dadc";
 const opacity = ".85";
 
 
-const width = 1200;
-const height = 800;
+const homewidth = 1200;
+const homeheight = 800;
 
 // Map and projection
 const projection = d3.geoNaturalEarth1()   //geoNaturalEarth1
@@ -41,10 +41,10 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
 
     let geoGenerator = d3.geoPath().projection(projection);
 
-    let svg = d3.select("#homeMap").attr("width", width).attr("height", height).attr("viewbox", `0 0 900 700`);
+    let svgMain = d3.select("#homeMap").attr("width", homewidth).attr("height", homeheight).attr("viewbox", `0 0 900 700`);
 
     // Draw the map
-    svg.append("g")
+    svgMain.append("g")
         .selectAll("path")
         .data(data.features)
         .join("path")
@@ -260,11 +260,11 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
         });
 
 
-    d3.csv(location.href + "/data/ukrainian-refugees-2023-by-country-MarchReport.csv").then(function (dataRef) {
-        console.log("Refugee data", dataRef.slice(0, 10));
+    d3.csv(location.origin + "/data/ukrainian-refugees-2023-by-country-MarchReport.csv").then(function (dataRef) {
+       // console.log("Refugee data", dataRef.slice(0, 10));
 
 
-        const lines = svg.selectAll("line")
+        const lines = svgMain.selectAll("line")
             .data(dataRef.slice(0, 10))
             .enter()
             .append("line")
@@ -276,7 +276,7 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
             .attr('y2', "100")
             .attr("class", d => { return "line_" + d.country + " inactive" })
 
-        const nodes = svg.append("g")
+        const nodes = svgMain.append("g")
             .selectAll(".circle")
             .data(dataRef.slice(0, 10))
             .enter()
