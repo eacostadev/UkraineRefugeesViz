@@ -20,7 +20,6 @@ var xScale = d3.scaleBand().range([0, width_edu]).padding(0.4),
 var g = svg_edu.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
 let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.href;
-console.log(siteURL);
 
 d3.csv(
   siteURL + "/data/education.csv",
