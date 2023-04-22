@@ -20,7 +20,7 @@ var xScale = d3.scaleBand().range([0, width_health]).padding(0.4),
 var g = svg_health.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
 d3.csv(
-  location.origin + "/data/health.csv",
+  location.href + "/data/health.csv",
   function (error, data) {
     if (error) {
       throw error;

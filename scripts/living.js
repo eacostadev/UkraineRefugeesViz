@@ -20,7 +20,7 @@ var xScale = d3.scaleBand().range([0, width_living]).padding(0.4),
 var g = svg_living.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
 d3.csv(
-  location.origin + "/data/living.csv",
+  location.href + "/data/living.csv",
   function (error, data) {
     if (error) {
       throw error;
