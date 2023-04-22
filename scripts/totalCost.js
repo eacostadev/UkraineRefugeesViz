@@ -20,7 +20,7 @@ let xScale = d3.scaleBand().range([0, width_total]).padding(0.4),
 let g = svg_total.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
 d3.csv(
-  location.href + "/data/cost-by-country.csv",
+  "https://eacostadev.github.io/UkraineRefugeesViz/data/cost-by-country.csv",
   function (error, data) {
     if (error) {
       throw error;

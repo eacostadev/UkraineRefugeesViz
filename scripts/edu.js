@@ -20,7 +20,7 @@ var xScale = d3.scaleBand().range([0, width_edu]).padding(0.4),
 var g = svg_edu.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
 d3.csv(
-  location.href + "/data/education.csv",
+  "https://eacostadev.github.io/UkraineRefugeesViz/data/education.csv",
   function (error, data) {
     if (error) {
       throw error;
