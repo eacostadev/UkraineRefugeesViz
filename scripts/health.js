@@ -19,8 +19,10 @@ var xScale = d3.scaleBand().range([0, width_health]).padding(0.4),
 
 var g = svg_health.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
+let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.href;
+
 d3.csv(
-  location.href + "/data/health.csv",
+  siteURL + "/data/health.csv",
   function (error, data) {
     if (error) {
       throw error;
