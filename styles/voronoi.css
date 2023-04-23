@@ -2,9 +2,7 @@ body {
   font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
 }
-svg {
-  background-color: #ffffff;
-}
+
 
 #title {
   font-size: 35px;
