@@ -259,8 +259,9 @@ d3.json("https://raw.githubusercontent.com/d3-node/d3node-map-world/master/data/
             d3.select(".node_Romania").classed("inactive", true)
         });
 
+let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.origin;
 
-    d3.csv(location.href + "/data/ukrainian-refugees-2023-by-country-MarchReport.csv").then(function (dataRef) {
+    d3.csv(siteURL + "/data/ukrainian-refugees-2023-by-country-MarchReport.csv").then(function (dataRef) {
        // console.log("Refugee data", dataRef.slice(0, 10));
 
 

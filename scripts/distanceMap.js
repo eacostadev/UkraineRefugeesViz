@@ -1,5 +1,5 @@
 const width_2 = 900;
-const height_2 = 500;
+const height_2 = 550;
 
 // Map and projection
 const distance_projection = d3.geoOrthographic()
@@ -7,8 +7,10 @@ const distance_projection = d3.geoOrthographic()
     .scale(1000);
 
 
+let geoURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.origin;
+
 // Load external map data
-d3.json(location.href + "/data/distance.geo.json").then(function (data) {
+d3.json(geoURL + "/data/distance.geo.json").then(function (data) {
 
     let geoGenerator2 = d3.geoPath().projection(distance_projection);
 
@@ -32,14 +34,15 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
         .style("stroke-width", "2")
 
 
-
     let ukrFeature = data.features[0];
     let ukrCenter = geoGenerator2.centroid(ukrFeature);
 
-   // console.log(ukrCenter)
-   // console.log(ukrFeature.properties.name)
+    // console.log(ukrCenter)
+    // console.log(ukrFeature.properties.name)
 
-    d3.csv(location.href + "/data/distance.csv").then(function (dataDist) {
+    let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.origin;
+
+    d3.csv(siteURL + "/data/distance.csv").then(function (dataDist) {
         let areas = svg_distance.append("g")
             .selectAll(".area")
             .data(dataDist)
@@ -74,7 +77,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "United Kingdom":
                     return "120";
                 case "Italy":
-                    return "300";
+                    return "323";
                 case "Spain":
                     return "50";
                 case "France":
@@ -99,7 +102,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "United Kingdom":
                     return "150";
                 case "Italy":
-                    return "280";
+                    return "299";
                 case "Spain":
                     return "340";
                 case "France":
@@ -107,7 +110,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "Slovakia":
                     return "240";
                 case "Romania":
-                    return "250";
+                    return "325";
             }
         }
 
@@ -116,7 +119,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "Russia":
                     return "610";
                 case "Poland":
-                    return "400";
+                    return "430";
                 case "Germany":
                     return "300";
                 case "Czechia":
@@ -132,7 +135,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "Slovakia":
                     return "420";
                 case "Romania":
-                    return "540";
+                    return "530";
             }
         }
 
@@ -143,9 +146,9 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "Poland":
                     return "210";
                 case "Germany":
-                    return "150";
+                    return "170";
                 case "Czechia":
-                    return "300";
+                    return "280";
                 case "United Kingdom":
                     return "200";
                 case "Italy":
@@ -157,7 +160,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 case "Slovakia":
                     return "300";
                 case "Romania":
-                    return "330";
+                    return "300";
             }
         }
 
@@ -221,7 +224,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 d3.select(".dist_Czechia").classed("inactive", true)
             });
 
-            d3.select("path[data-name='England']")
+        d3.select("path[data-name='England']")
             .on('mouseover', function (d, i) {
                 d3.select(this).transition()
                     .style("stroke", englandColor)
@@ -236,7 +239,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 d3.select(".dist_United").classed("inactive", true)
             });
 
-            d3.select("path[data-name='Italy']")
+        d3.select("path[data-name='Italy']")
             .on('mouseover', function (d, i) {
                 d3.select(this).transition()
                     .style("stroke", italyColor)
@@ -251,7 +254,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 d3.select(".dist_Italy").classed("inactive", true)
             });
 
-            d3.select("path[data-name='Spain']")
+        d3.select("path[data-name='Spain']")
             .on('mouseover', function (d, i) {
                 d3.select(this).transition()
                     .style("stroke", spainColor)
@@ -266,7 +269,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 d3.select(".dist_Spain").classed("inactive", true)
             });
 
-            d3.select("path[data-name='France']")
+        d3.select("path[data-name='France']")
             .on('mouseover', function (d, i) {
                 d3.select(this).transition()
                     .style("stroke", franceColor)
@@ -281,7 +284,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 d3.select(".dist_France").classed("inactive", true)
             });
 
-            d3.select("path[data-name='Slovakia']")
+        d3.select("path[data-name='Slovakia']")
             .on('mouseover', function (d, i) {
                 d3.select(this).transition()
                     .style("stroke", slovakiaColor)
@@ -296,7 +299,7 @@ d3.json(location.href + "/data/distance.geo.json").then(function (data) {
                 d3.select(".dist_Slovakia").classed("inactive", true)
             });
 
-            d3.select("path[data-name='Romania']")
+        d3.select("path[data-name='Romania']")
             .on('mouseover', function (d, i) {
                 d3.select(this).transition()
                     .style("stroke", romaniaColor)

@@ -12,14 +12,14 @@ svg_living
   .attr("transform", "translate(100,0)")
   .attr("x", -10)
   .attr("y", 50)
-  .text("Ukrainian Refugee Support Living Cost");
+  .text("Ukrainian Refugee Support - Living Cost");
 
 var xScale = d3.scaleBand().range([0, width_living]).padding(0.4),
   yScale = d3.scaleLinear().range([height_living, 0]);
 
 var g = svg_living.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
-let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.href;
+let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.origin;
 
 d3.csv(
   siteURL + "/data/living.csv",

@@ -26,9 +26,11 @@ body {
 .disBlock {
     display: block;
 }
+
 .disInline-Block {
     display: inline-block;
 }
+
 .marginAuto {
     margin: 0 auto;
 }
@@ -66,12 +68,12 @@ body {
     display: none;
 }
 
-.inactive{
+.inactive {
     opacity: 0;
 }
 
 #distanceMap {
-margin-top: 5%;
+    margin-top: 5%;
 }
 
 .distStyle {
@@ -79,3 +81,12 @@ margin-top: 5%;
     font-weight: 600;
 }
 
+#barChartContent {
+    width: 45%;
+}
+
+@media screen and (max-width: 1300px) {
+    #barChartContent {
+        width: 100%;
+    }
+}
