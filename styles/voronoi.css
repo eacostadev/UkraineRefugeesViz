@@ -1,0 +1,68 @@
+body {
+  font-family: 'Caveat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+svg {
+  background-color: #ffffff;
+}
+
+#title {
+  font-size: 35px;
+}
+
+text.tiny {
+  font-size: 13pt;
+}
+text.light {
+  fill: lightgrey;
+}
+
+.world {
+  stroke: #ffffff;
+  stroke-width: 4px;
+}
+
+.cell {
+  stroke: white;
+  stroke-width: 1px;
+}
+
+.label {
+  text-anchor: middle;
+  fill: white;
+}
+
+.label > .name {
+  dominant-baseline: text-after-edge;
+}
+
+.label > .value {
+  dominant-baseline: text-before-edge;
+}
+
+.hoverer {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 0px;
+}
+
+.hoverer:hover {
+  stroke-width: 3px;
+}
+
+.legend-color {
+  stroke-width: 1px;
+  stroke: rgb(153, 167, 199);
+}
+
+.subTitle {
+  font-size: 35px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.smallHeadline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

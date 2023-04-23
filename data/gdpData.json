@@ -1,0 +1,76 @@
+{
+  "name": "world",
+  "children": [
+    {
+      "name": "Germany",
+      "color": "#7DCFB6",
+      "children": [
+        { "name": "Germany", "weight": 4.26, "code": "DE" }
+        
+      ]
+    },
+    {
+      "name": "France",
+      "color": "#9b71bb",
+      "children": [
+        { "name": "France", "weight": 2.96, "code": "FR" }
+      ]
+    },
+    {
+      "name": "Italy",
+      "color": "#5999e5",
+      "children": [
+        { "name": "Italy", "weight": 2.11, "code": "IT" }
+      ]
+    },
+    {
+      "name": "Spain",
+      "color": "#90c371",
+      "children": [
+        { "name": "Spain", "weight": 1.43, "code": "ES" }
+      ]
+    },
+    {
+      "name": "Switzerland",
+      "color": "#fff067",
+      "children": [
+        { "name": "Switzerland", "weight": 0.8, "code": "CH" }
+      ]
+    },
+    {
+      "name": "Poland",
+      "color": "#EAAC8B",
+      "children": [
+        { "name": "Poland", "weight": 0.68, "code": "PL" }
+      ]
+    },
+    {
+      "name": "Austria",
+      "color": "#4c71b4",
+      "children": [
+        { "name": "Austria", "weight": 0.48, "code": "AT" }
+      ]
+    },
+    {
+      "name": "Czechia",
+      "color": "#00B2CA",
+      "children": [
+        { "name": "Czechia", "weight": 0.28, "code": "CZ" }
+      ]
+    },
+    {
+      "name": "Romania",
+      "color": "#a8dadc",
+      "children": [
+        { "name": "Romania", "weight": 0.28, "code": "RO" }
+      ]
+    },
+    {
+      "name": "Slovakia",
+      "color": "#00f5d4",
+      "children": [
+        { "name": "Slovakia", "weight": 0.12, "code": "SK" }
+      ]
+    }
+  ]
+}

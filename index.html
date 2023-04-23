@@ -13,9 +13,7 @@
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
-    <script src="https://unpkg.com/topojson@3"></script>
-    <script src="scripts/homeMap.js"></script>
-    <script src="scripts/distanceMap.js"></script>
+
 
 </head>
 
@@ -33,7 +31,7 @@
     </div>
 
     <!-- Distance Map -->
-    <div id="distanceDiv" class="marginTop5 disInline-Block" style="width: 49%;">
+    <div id="distanceDiv" class="disInline-Block marginTop5" style="width: 48%; margin-left: 50px;">
         <div class="subTitle textCenter">Distance Traveled from Ukraine</div>
         <div class="smallHeadline textCenter">
             The distance is measured from capital city to capital city <br> Note: Russian border from Ukraine is 21km
@@ -42,17 +40,26 @@
     </div>
 
     <!-- Bar Chart -->
-    <div id="barChartContent" class="marginTop5 disInline-Block">
+    <div id="barChartContent" class="disInline-Block" style="">
         <iframe src="totalCost.html" frameborder="0" cellspacing="0" width="700" height="700" background="none"
             scrolling="no" position="fixed" style="border-style: none;"></iframe>
     </div>
 
+    <!-- Voronoi Diagram -->
+    <div id="GDPContent" class="marginAuto" style="width: 46%; margin-top: 40px;">
+        <iframe src="voronoi.html" frameborder="0" cellspacing="0" width="800" height="600" background="none"
+            scrolling="no" position="fixed" style="border-style: none;"></iframe>
+    </div>
 
-    <div class="textCenter smallHeadline" style="margin-bottom: 20px">
+
+    <div class="textCenter smallHeadline" style="margin: 50px 0;">
         <p class="marginNone">Authors:</p>
         <p class="marginNone">Elizabeth A.C. & Pinar G.</p>
     </div>
 
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="scripts/homeMap.js"></script>
+    <script src="scripts/distanceMap.js"></script>
 
 </body>
 

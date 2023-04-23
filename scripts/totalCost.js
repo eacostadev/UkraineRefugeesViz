@@ -12,14 +12,14 @@ svg_total
   .attr("transform", "translate(100,0)")
   .attr("x", -10)
   .attr("y", 50)
-  .text("Ukrainian Refugee Support Total Cost");
+  .text("Ukrainian Refugee Support - Total Cost");
 
 let xScale = d3.scaleBand().range([0, width_total]).padding(0.4),
   yScale = d3.scaleLinear().range([height_total, 0]);
 
 let g = svg_total.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
-let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.href;
+let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.origin;
 
 d3.csv(
   siteURL + "/data/cost-by-country.csv",

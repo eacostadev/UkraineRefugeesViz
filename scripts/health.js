@@ -12,14 +12,14 @@ let svg_health = d3.select("#health").attr("width", w3).attr("height", h3),
   .attr("transform", "translate(100,0)")
   .attr("x", -60)
   .attr("y", 50)
-  .text("Ukrainian Refugee Support Health Care Cost");
+  .text("Ukrainian Refugee Support - Health Care Cost");
 
 var xScale = d3.scaleBand().range([0, width_health]).padding(0.4),
   yScale = d3.scaleLinear().range([height_health, 0]);
 
 var g = svg_health.append("g").attr("transform", "translate(" + 100 + "," + 100 + ")");
 
-let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.href;
+let siteURL = location.href.includes("UkraineRefugeesViz") ? "https://eacostadev.github.io/UkraineRefugeesViz" : location.origin;
 
 d3.csv(
   siteURL + "/data/health.csv",
