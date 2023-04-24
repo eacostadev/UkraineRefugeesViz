@@ -87,6 +87,10 @@
      font-size: 15px;
  }
 
+ .smallHeadline {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
  .xaxis {
      font-size: 14px;
  }

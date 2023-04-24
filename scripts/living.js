@@ -1,4 +1,4 @@
-let w4 = 600;
+let w4 = 700;
 let h4 = 500;
 
 let svg_living = d3.select("#living").attr("width", w4).attr("height", h4),
@@ -11,8 +11,16 @@ svg_living
   .attr("class", "title")
   .attr("transform", "translate(100,0)")
   .attr("x", -10)
-  .attr("y", 50)
+  .attr("y", 40)
   .text("Ukrainian Refugee Support - Living Cost");
+
+  svg_living
+  .append("text")
+  .attr("class", "smallHeadline")
+  .attr("transform", "translate(100,0)")
+  .attr("x", -10)
+  .attr("y", 70)
+  .text("Note: Unfortunately, we could not find a credible source for data into Russia's cost.");
 
 var xScale = d3.scaleBand().range([0, width_living]).padding(0.4),
   yScale = d3.scaleLinear().range([height_living, 0]);
