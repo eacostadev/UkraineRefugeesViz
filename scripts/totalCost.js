@@ -1,4 +1,4 @@
-let w = 600;
+let w = 700;
 let h = 500;
 
 let svg_total = d3.select("#totalCost").attr("width", w).attr("height", h),
@@ -11,8 +11,16 @@ svg_total
   .attr("class", "title")
   .attr("transform", "translate(100,0)")
   .attr("x", -10)
-  .attr("y", 50)
+  .attr("y", 40)
   .text("Ukrainian Refugee Support - Total Cost");
+
+  svg_total
+  .append("text")
+  .attr("class", "smallHeadline")
+  .attr("transform", "translate(100,0)")
+  .attr("x", -10)
+  .attr("y", 70)
+  .text("Note: Unfortunately, we could not find a credible source for data into Russia's cost.");
 
 let xScale = d3.scaleBand().range([0, width_total]).padding(0.4),
   yScale = d3.scaleLinear().range([height_total, 0]);

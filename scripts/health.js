@@ -1,4 +1,4 @@
-let w3 = 600;
+let w3 = 700;
 let h3 = 500;
 
 let svg_health = d3.select("#health").attr("width", w3).attr("height", h3),
@@ -11,8 +11,16 @@ let svg_health = d3.select("#health").attr("width", w3).attr("height", h3),
   .attr("class", "title")
   .attr("transform", "translate(100,0)")
   .attr("x", -60)
-  .attr("y", 50)
+  .attr("y", 40)
   .text("Ukrainian Refugee Support - Health Care Cost");
+
+  svg_health
+  .append("text")
+  .attr("class", "smallHeadline")
+  .attr("transform", "translate(100,0)")
+  .attr("x", -60)
+  .attr("y", 70)
+  .text("Note: Unfortunately, we could not find a credible source for data into Russia's cost.");
 
 var xScale = d3.scaleBand().range([0, width_health]).padding(0.4),
   yScale = d3.scaleLinear().range([height_health, 0]);

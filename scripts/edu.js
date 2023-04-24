@@ -1,4 +1,4 @@
-let w2 = 600;
+let w2 = 700;
 let h2 = 500;
 
 let svg_edu = d3.select("#edu").attr("width", w2).attr("height", h2),
@@ -11,8 +11,16 @@ let svg_edu = d3.select("#edu").attr("width", w2).attr("height", h2),
   .attr("class", "title")
   .attr("transform", "translate(100,0)")
   .attr("x", -50)
-  .attr("y", 50)
+  .attr("y", 40)
   .text("Ukrainian Refugee Support - Education Cost");
+
+  svg_edu
+  .append("text")
+  .attr("class", "smallHeadline")
+  .attr("transform", "translate(100,0)")
+  .attr("x", -50)
+  .attr("y", 70)
+  .text("Note: Unfortunately, we could not find a credible source for data into Russia's cost.");
 
 var xScale = d3.scaleBand().range([0, width_edu]).padding(0.4),
   yScale = d3.scaleLinear().range([height_edu, 0]);
